@@ -1,0 +1,79 @@
+---
+import ArrowIcon from '@components/icons/ArrowIcon.astro';
+import FilterDropdown from '@components/islands/FilterDropdown.svelte';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DaisyUI + Astro - Dropdown Issue</title>
+	</head>
+	<body class="min-h-screen grid place-content-center">
+		<div class="max-w-lg m-auto">
+			<h1 class="text-3xl font-bold mb-8">
+				DaisyUI Dropdown + Astro + PurgeCSS
+			</h1>
+			<div
+				class="[&>*]:text-sm p-4 bg-slate-50 border border-slate-200 rounded-md"
+			>
+				<p class="font-semibold">
+					1 - Install dependencies:<br /><code
+						class="inline-flex p-2 bg-slate-700 text-green-400 rounded-md"
+						>yarn install</code
+					><br />
+					<p>
+				<p class="font-semibold mt-8">
+					2 - Try to run the project in development mode:<br /><code
+						class="inline-flex p-2 bg-slate-700 text-green-400 rounded-md"
+						>yarn dev</code
+					><br />
+					<p>
+						<div class="text-lg mt-2">Result:</div>
+						<i class="text-green-500 rounded-md p-2 bg-green-100 inline-flex"
+							>Everything just works. The dropdown is closed by default, when
+							focused the dropdown menu opens.</i
+						>
+					</p>
+				</p>
+				<p class="mt-8 font-semibold">
+					3 - Try to run the project in production mode:<br /><code
+						class="inline-flex p-2 bg-slate-700 text-green-400 rounded-md"
+						>yarn build && yarn preview</code
+					><br />
+					<div class="text-lg mt-2">Result:</div>
+					<i class="text-red-500 p-2 rounded-md bg-red-100 inline-flex"
+						>The dropdown component below will be open by default,
+						clicking/focusing the dropdown has no effect.</i
+					>
+				</p>
+			</div>
+			<div class="p-4 bg-slate-300 rounded-lg border border-slate-600 mt-8">
+				<h2 class="font-semibold mb-4">Example:</h2>
+				<FilterDropdown
+					client:only="svelte"
+					queryParam="test"
+					label="Dropdown Filter"
+					options={[
+						{
+							friendlyName: 'Option 1',
+							isDefault: true,
+							paramValue: 'test-1',
+						},
+						{
+							friendlyName: 'Option 2',
+							isDefault: false,
+							paramValue: 'test-2',
+						},
+						{
+							friendlyName: 'Option 3',
+							isDefault: false,
+							paramValue: 'test-3',
+						},
+					]}><ArrowIcon class="size-4" slot="icon" /></FilterDropdown
+				>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	class={$$props.class}
+	width="42"
+	height="78"
+	fill="none"
+	style="-webkit-print-color-adjust::exact"
+	viewBox="2587.5 130472.5 42 78"
+	><g data-testid="svg-path"
+		><path
+			d="m2594.5 130543.5 25.191-25.212c3.745-3.749 3.745-9.827 0-13.576l-25.191-25.212"
+			class="fills"
+			style="fill:none"
+		></path><g class="strokes"
+			><path
+				d="m2594.5 130543.5 25.191-25.212c3.745-3.749 3.745-9.827 0-13.576l-25.191-25.212"
+				class="stroke-shape"
+				style="fill:none;fill-opacity:none;stroke-width:5;stroke: currentColor;stroke-opacity:1"
+			></path></g
+		></g
+	></svg
+>

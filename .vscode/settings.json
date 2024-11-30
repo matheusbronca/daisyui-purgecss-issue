@@ -1,0 +1,9 @@
+{
+"eslint.validate": [
+  "javascript",
+  "javascriptsvelte",
+  "astro",
+  "typescript",
+  "typescriptsvelte"
+],
+}

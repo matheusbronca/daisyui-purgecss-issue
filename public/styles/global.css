@@ -1,0 +1,226 @@
+@font-face {
+	font-family: "Poppins";
+	src:
+		local("Poppins Regular"),
+		local("Poppins-Regular"),
+		url("/fonts/Poppins-Regular.woff2") format("woff2"),
+		url("/fonts/Poppins-Regular.woff") format("woff"),
+		url("/fonts/Poppins-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src:
+		local("Poppins Medium"),
+		local("Poppins-Medium"),
+		url("/fonts/Poppins-Medium.woff2") format("woff2"),
+		url("/fonts/Poppins-Medium.woff") format("woff"),
+		url("/fonts/Poppins-Medium.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src:
+		local("Poppins Light"),
+		local("Poppins-Light"),
+		url("/fonts/Poppins-Light.woff2") format("woff2"),
+		url("/fonts/Poppins-Light.woff") format("woff"),
+		url("/fonts/Poppins-Light.ttf") format("truetype");
+	font-weight: light;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bropella";
+	src:
+		local("Bropella"),
+		url("/fonts/Bropella.woff2") format("woff2"),
+		url("/fonts/Bropella.woff") format("woff"),
+		url("/fonts/Bropella.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	@apply text-accent;
+	@apply bg-secondary/20;
+}
+
+::selection {
+	@apply text-accent;
+	@apply bg-secondary/20;
+}
+
+:root {
+	font-family:
+		"Poppins",
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
+}
+
+input::placeholder {
+	@apply font-light;
+}
+
+html {
+	/* @apply scroll-smooth; */
+}
+
+body {
+	@apply text-lg;
+	@apply font-light;
+	@apply text-gray-500;
+}
+
+a {
+	@apply text-primary;
+	@apply underline-offset-4;
+}
+
+a:not(.btn):hover {
+	@apply underline;
+}
+
+button {
+	font-family:
+		"Poppins",
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
+}
+
+.container {
+	@apply max-w-7xl;
+	@apply m-auto;
+}
+
+.btn {
+	@apply rounded-full;
+	@apply font-normal;
+	@apply text-lg;
+	@apply font-normal;
+	@apply box-content;
+	@apply px-4;
+	@apply py-1;
+}
+
+.btn.btn-primary {
+	@apply text-white;
+}
+
+.input::placeholder {
+	@apply font-normal;
+}
+
+.input {
+	@apply outline-offset-0;
+	@apply outline-orange-100;
+	@apply pl-6;
+}
+
+.input:focus-within {
+	@apply border-[1px];
+	@apply border-orange-300;
+	@apply outline-none;
+	@apply outline-offset-0;
+	@apply outline-orange-100;
+	@apply outline-4;
+	@apply bg-white;
+	@apply transition-all;
+	@apply duration-75;
+	@apply ease-linear;
+}
+
+textarea {
+	@apply rounded-3xl;
+	@apply bg-gray-50;
+}
+
+textarea:focus {
+	@apply border-orange-300;
+	@apply outline-none;
+	@apply outline-offset-0;
+	@apply outline-orange-100;
+	@apply outline-4;
+	@apply bg-white;
+	@apply transition-all;
+	@apply duration-75;
+	@apply ease-linear;
+}
+
+.ghost-img {
+	@apply select-none;
+	@apply pointer-events-none;
+}
+
+.abs-y-centered {
+	@apply absolute;
+	@apply top-1/2;
+	@apply -translate-y-1/2;
+}
+
+.abs-x-centered {
+	@apply absolute;
+	@apply left-1/2;
+	@apply -translate-x-1/2;
+}
+
+.abs-centered {
+	@apply absolute;
+	@apply top-1/2;
+	@apply -translate-y-1/2;
+	@apply left-1/2;
+	@apply -translate-x-1/2;
+}
+
+.astro-loading-indicator {
+	height: 4px !important;
+	background-image: linear-gradient(45deg, #ff781b 50%, #ffc76f 90%) !important;
+}
+
+.outlined-effect {
+	@apply relative;
+	@apply transition-all;
+	@apply before:size-full;
+	@apply before:absolute;
+	@apply before:left-0;
+	@apply before:top-0;
+	@apply before:border-0;
+	@apply before:border-transparent;
+	@apply before:rounded-3xl;
+	@apply group-hover:before:border-2;
+	@apply group-hover:before:border-secondary;
+	@apply before:outline-0;
+	@apply before:outline-transparent;
+	@apply group-hover:before:outline-secondary/40;
+	@apply before:outline;
+	@apply group-hover:before:outline-4;
+	@apply before:transition-all;
+	@apply before:duration-75;
+}
